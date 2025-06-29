@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  pingpong1:
+    build: .
+    environment:
+      - PORT=3000
+      - RESPONSE=Pong Server 1
+    ports:
+      - "3000:3000"
+  
+  pingpong2:
+    build: .
+    environment:
+      - PORT=3001
+      - RESPONSE=Pong Server 2
+    ports:
+      - "3001:3001"
+  
+  pingpong3:
+    build: .
+    environment:
+      - PORT=3002
+      - RESPONSE=Pong Server 3
+    ports:
+      - "3002:3002"
